@@ -5,6 +5,7 @@ osrs_players.py:
 
 Checks how many players is currently plaing OldSchool Runescape,
 and logs the amount to a file "osrs_logs/osrs_player_log.txt".
+The script does this continously, with 10 second intervals, until terminated.
 """
 __author__      = "Mads Peter Horndrup"
 
@@ -30,5 +31,5 @@ if __name__ == '__main__':
         writeLine("osrs_logs/osrs_player_log.txt", line)
         
         print(result.group(1), now.strftime("%Y-%m-%d %H:%M:%S"))
-        time.sleep(1)
+        time.sleep(10)
 
